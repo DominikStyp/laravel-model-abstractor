@@ -4,7 +4,7 @@
 "repositories": [
         {
             "type": "path",
-            "url": "packages-to-install/dominikstyp/laravel-model-abstractor",
+            "url": "packages-repos/dominikstyp/laravel-model-abstractor",
             "options": {
                 "symlink": false
             }
