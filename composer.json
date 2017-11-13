@@ -1,0 +1,41 @@
+{
+        "name": "dominikstyp/laravel-model-abstractor",
+        "minimum-stability": "dev",
+        "require": {
+            "laravel/laravel": ">=5.3",
+            "php": "~7.0"
+        },
+        "type": "library",
+        "license": "MIT",
+        "autoload": {
+            "psr-4": {
+                "DominikStyp\\LaravelModelAbstractor\\": "src/"
+            }
+        },
+        
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "DominikStyp\\LaravelModelAbstractor\\LaravelModelAbstractorServiceProvider"
+                ],
+                "aliases": {
+                    "LarModAbs": "DominikStyp\\LaravelModelAbstractor\\LarModAbs"
+                }
+            }
+        },
+        
+        "authors": [
+            {
+                "name": "DominikStyp",
+                "email": "dominik.stypula1@gmail.com"
+            }
+        ],
+        
+        "scripts": {
+            "post-install-cmd": [
+                "@php artisan vendor:publish --provider='\\DominikStyp\\LaravelModelAbstractor\\LaravelModelAbstractorServiceProvider'"
+            ]
+        },
+        
+        "description": "Makes AbstractModel inside app/models directory, changes make:model command to generate models which inherit from AbstractModel, and provides php artisan command to move your existing models to app/models directory and change their inheritance to AbstractModel. Thanks to that all your models will inherit from your custom class."
+    }
