@@ -1,4 +1,5 @@
-composer.json
+
+# composer.json
 ```
 "repositories": [
         {
@@ -11,7 +12,7 @@ composer.json
     ],
 ```
 
-cmd command
+# cmd command
 ```composer require "dominikstyp/laravel-model-abstractor @dev" -vvv```
-artisan command
+# artisan command
 ```php artisan vendor:publish```
