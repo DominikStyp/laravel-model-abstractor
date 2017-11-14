@@ -9,6 +9,18 @@ composer require "dominikstyp/laravel-model-abstractor @dev" -vvv
 php artisan vendor:publish --provider='\\DominikStyp\\LaravelModelAbstractor\\LaravelModelAbstractorServiceProvider'
 ```
 
+## Laravel >= 5.5
+Due to package discovery feature introduced in Laravel 5.5, you don't have to add service provider to your providers any more.<br />
+## Laravel < 5.5
+For Laravel less than 5.5, you must add service provider to your **config/app.php** file, as follows: <br />
+```php
+ 'providers' => [
+    // ...
+    DominikStyp\LaravelModelAbstractor\LaravelModelAbstractorServiceProvider::class,
+    // ...
+  ],
+```
+
 # Usage
 **Laravel Model Abstractor** provides new console tasks: <br />
 ``` laravel-model-abstractor:list-models ``` Lists all your models which inherit from **Eloquent\Model** <br />
