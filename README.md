@@ -17,3 +17,43 @@ and namespaces to **App\Models**, and moves them to **app\Models** directory.<br
 WARNING! This doesn't affect **User** model, because it inherits from **Authenticatable**, so you must change it manually,<br />
 along with **config/auth.php - providers section**.<br />
 
+# Example
+Let's say you have a model file **app/Dummy1.php** which contains following code: <br />
+```php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Dummy1 extends Model
+{
+    //
+}
+```
+That model is generated automatically by ```php artisan make:model Dummy1``` command. <br />
+But you wish that your model (and others too) would inherit from your **AbstractModel** class like this: <br />
+```php
+<?php
+
+namespace App\Models;
+
+class Dummy1 extends AbstractModel
+{
+    //
+}
+```
+With your **AbstractModel** looking like this: <br />
+```php
+<?php
+namespace App\Models;
+
+/**
+ * AbstractModel
+ *
+ */
+abstract class AbstractModel extends \Illuminate\Database\Eloquent\Model {
+    /** your custom code **/
+}
+```
+All you have to do is invoke ```php artisan laravel-model-abstractor:change-models-inheritance``` and you're done.
