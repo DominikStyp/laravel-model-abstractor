@@ -69,3 +69,14 @@ abstract class AbstractModel extends \Illuminate\Database\Eloquent\Model {
 }
 ```
 All you have to do is invoke ```php artisan laravel-model-abstractor:change-models-inheritance``` and you're done.
+# Additional Features
+If you'll look into **Models/Traits** directory you'll find **LocalScopes.php** trait, which is attached to **AbstractModel**.
+**LocalScopes** provies you following functionality for all your models which inherit from **AbstractModel** (look at example below):
+```php
+DummyModel1::where("something",1)->newest();
+DummyModel1::where("something",2)->oldest();
+// these are equivalent of
+DummyModel1::where("something",1)->orderBy("id","desc");
+DummyModel1::where("something",2)->orderBy("id","asc");
+```
+
