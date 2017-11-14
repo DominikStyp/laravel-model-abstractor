@@ -37,5 +37,7 @@
             ]
         },
         
-        "description": "Makes AbstractModel inside app/models directory, changes make:model command to generate models which inherit from AbstractModel, and provides php artisan command to move your existing models to app/models directory and change their inheritance to AbstractModel. Thanks to that all your models will inherit from your custom class."
+        "description": "Makes AbstractModel inside app/models directory, changes make:model command to generate models which inherit from AbstractModel, and provides php artisan command to move your existing models to app/models directory and change their inheritance to AbstractModel. Thanks to that all your models will inherit from your custom class.",
+    
+        "keywords": ["laravel", "model", "abstractor", "abstract", "change", "generator", "custom"]
     }
