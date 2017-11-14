@@ -1,5 +1,6 @@
+# Installation for local development
 
-# composer.json
+## composer.json
 ```
 "repositories": [
         {
@@ -12,7 +13,8 @@
     ],
 ```
 
-# cmd command
-```composer require "dominikstyp/laravel-model-abstractor @dev" -vvv```
-# artisan command
-```php artisan vendor:publish```
+## Installation commands
+```
+composer require "dominikstyp/laravel-model-abstractor @dev" -vvv
+php artisan vendor:publish --provider='\\DominikStyp\\LaravelModelAbstractor\\LaravelModelAbstractorServiceProvider'
+```
